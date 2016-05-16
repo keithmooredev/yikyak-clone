@@ -1,0 +1,36 @@
+.navbar {
+  margin: 0;
+}
+
+.splash {
+  background-image: url("../images/hippo.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  width: 100%;
+  height: 93vh;
+  position: relative;
+}
+
+.splash-inner {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  height: 50%;
+  position: absolute;
+  overflow: hidden;
+  a {
+    color: #fff;
+  }
+  h1 {
+    margin: auto;
+    text-align: center;
+  }
+}
+
+.content-wrapper {
+  width: 60%;
+  margin: auto;
+}

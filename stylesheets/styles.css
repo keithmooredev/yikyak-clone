@@ -1,0 +1,79 @@
+/* line 1, ../compass/sass/_base.scss */
+body {
+  margin: 0;
+}
+
+/* line 5, ../compass/sass/_base.scss */
+img {
+  width: 100%;
+}
+
+/* line 12, ../compass/sass/_base.scss */
+div {
+  border: 1px solid red;
+}
+
+/* line 1, ../compass/sass/_footer.scss */
+.footer {
+  background: #000;
+}
+
+/* line 1, ../compass/sass/_home.scss */
+.navbar {
+  margin: 0;
+}
+
+/* line 5, ../compass/sass/_home.scss */
+.splash {
+  background-image: url("../images/hippo.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  width: 100%;
+  height: 93vh;
+  position: relative;
+}
+
+/* line 14, ../compass/sass/_home.scss */
+.splash-inner {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  height: 50%;
+  position: absolute;
+  overflow: hidden;
+}
+/* line 24, ../compass/sass/_home.scss */
+.splash-inner a {
+  color: #fff;
+}
+/* line 27, ../compass/sass/_home.scss */
+.splash-inner h1 {
+  margin: auto;
+  text-align: center;
+}
+
+/* line 33, ../compass/sass/_home.scss */
+.content-wrapper {
+  width: 60%;
+  margin: auto;
+}
+
+/* line 1, ../compass/sass/_posts.scss */
+.posts-wrapper {
+  margin: auto;
+}
+
+/* line 5, ../compass/sass/_posts.scss */
+.post {
+  background-color: #E6E6E6;
+  padding: 15px;
+  margin: auto;
+  overflow: hidden;
+}
+/* line 10, ../compass/sass/_posts.scss */
+.post h4, .post p {
+  color: #009999;
+}

@@ -1,0 +1,13 @@
+.posts-wrapper {
+	margin: auto;
+}
+
+.post {
+  background-color: $post-bg;
+  padding: 15px;
+  margin: auto;
+  overflow: hidden;
+  h4, p {
+  	color: $post-teal;
+  }
+}
