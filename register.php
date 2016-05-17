@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Save the Hippo</title>
+	<title>Save the Hippo - Register</title>
 	<link rel="stylesheet" href="stylesheets/jquery-ui.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
@@ -41,38 +41,47 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<div class="splash">
-	<div class="splash-inner">
-		<a href="#mission"><h1>Save the Hippo</h1></a>
-	</div>
-</div>
-
-
 <div class="container">
-	<div class="content-wrapper">
-		<div id="mission" class="mission">
-			<h2>Our Mission</h2>
-			<p>We are a society dedicated to saving the hippo. We have been active for over 3 years and embrace every chance we get to save one of these majestic creatures. This site is a means for you to share your hippo saving activity with other hippo lovers. Please sign up and tell us a bit about the last hippo you saved.</p>
+	<div class="row">
+		<div class="col-sm-12">
+			<h1>Registration</h1>
+			<h5>Choose a username and password</h5>
 		</div>
-		<div id="posts" class="posts-wrapper">
-			<h2>Recent Posts</h2>
-			<p>Posts go here...</p>
-			<div class="post">
-				<div class="row">
-					<div class="col-sm-11">
-						<h4>Test Post</h4>
-						<p>This is a post.</p>
-					</div>
-					<div class="col-sm-1 votes-wrapper">
-						<a href="#" class="votes"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
-						<div class="votes">0</div>
-						<a href="#" class="votes"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
+	</div>
+	<div class="row">
+		<h5 class="error-message text-center">PHP Error Message Goes Here</h5>
+	</div>
+	<div class="row">
+		<div class="col-sm-12 text-center">
+			<form action="accounts.php?action=register" class="form-horizontal">
+				<div class="form-group">
+					<label for="unField" class="col-sm-4 control-label">Username:</label>
+					<div class="col-sm-4">
+						<input type="text" id="unField" name="username" placeholder="Your name" minlength="4" maxlength="50" class="form-control">
 					</div>
 				</div>
-			</div>
+				<div class="form-group">
+					<label for="pwField" class="col-sm-4 control-label">Password:</label>
+					<div class="col-sm-4">
+						<input type="password" id="pwField" name="password" placeholder="Choose a password" minlength="4" maxlength="20" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="pwField2" class="col-sm-4 control-label"></label>
+					<div class="col-sm-4">
+						<input type="password" id="pwField2" name="password2" placeholder="Repeat the password" minlength="4" maxlength="20" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="emailField" class="col-sm-4 control-label">Email:</label>
+					<div class="col-sm-4">
+						<input type="email" id="emailField" name="email" placeholder="Your email address" minlength="4" maxlength="50" class="form-control">
+					</div>
+				</div>
+				<div class="button-holder">
+					<button type="submit" class="btn btn-success">Submit</button>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>
-
-</body>
-</html>

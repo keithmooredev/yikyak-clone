@@ -72,3 +72,8 @@ img {
 .post h4, .post p {
   color: #009999;
 }
+
+/* line 15, ../compass/sass/_posts.scss */
+.votes, .fa {
+  color: #009999;
+}
