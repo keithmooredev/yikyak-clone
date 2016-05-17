@@ -8,11 +8,6 @@ img {
   width: 100%;
 }
 
-/* line 12, ../compass/sass/_base.scss */
-div {
-  border: 1px solid red;
-}
-
 /* line 1, ../compass/sass/_footer.scss */
 .footer {
   background: #000;
