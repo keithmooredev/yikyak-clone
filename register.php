@@ -1,6 +1,7 @@
 <?php
 
 	require_once('includes/head.php');
+	require_once('includes/header.php');
 ?>
 
 
@@ -8,7 +9,13 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<h1>Registration</h1>
-			<h5>Choose a username and password</h5>
+			<?php 
+			if ($_GET['error'] == 'username'){
+				print "<h5>The username entered is taken.</h5>";
+			} else if ($_GET['error'] == 'password'){
+				print "<h5>The passwords do not match.</h5>";
+			}
+			?>
 		</div>
 	</div>
 	<div class="row">
@@ -18,9 +25,15 @@
 		<div class="col-sm-12 text-center">
 			<form action="accounts.php?action=register" method="post" class="form-horizontal">
 				<div class="form-group">
+					<label for="nameField" class="col-sm-4 control-label">Real Name:</label>
+					<div class="col-sm-4">
+						<input type="text" id="nameField" name="realName" placeholder="Your name" minlength="4" maxlength="50" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
 					<label for="unField" class="col-sm-4 control-label">Username:</label>
 					<div class="col-sm-4">
-						<input type="text" id="unField" name="username" placeholder="Your name" minlength="4" maxlength="50" class="form-control">
+						<input type="text" id="unField" name="username" placeholder="Desired username" minlength="4" maxlength="50" class="form-control">
 					</div>
 				</div>
 				<div class="form-group">
@@ -42,7 +55,7 @@
 					</div>
 				</div>
 				<div class="button-holder">
-					<button type="submit" class="btn btn-success">Submit</button>
+					<button type="submit" class="btn btn-success">Register</button>
 				</div>
 			</form>
 		</div>

@@ -1,6 +1,17 @@
 <?php
-
+	// some error reporting stuff
+	//ini_set('display_errors', 1);
+	//ini_set('display_startup_errors', 1);
+	//error_reporting(E_ALL);
+	
+	// get the header and navbar in here
 	require_once('includes/head.php');
+	require_once('includes/header.php');
+
+	// check to see whether there is a session variable called username
+	if ($_SESSION['username']){
+		$logged_in = true;
+	}
 ?>
 
 

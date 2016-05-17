@@ -1,6 +1,7 @@
 <?php
 
 	require_once('includes/head.php');
+	require_once('includes/header.php');
 ?>
 
 
@@ -8,7 +9,10 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<h1>Log In</h1>
-			<h5>Enter your username and password</h5>
+			<?php 
+			if ($_GET['error'] == 'true'){
+				print "<h5>The username or password entered is not correct.</h5>";
+			} ?>
 		</div>
 	</div>
 	<div class="row">
