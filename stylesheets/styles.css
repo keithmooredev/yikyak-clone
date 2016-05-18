@@ -59,30 +59,40 @@ footer {
 }
 
 /* line 1, ../compass/sass/_posts.scss */
+#new-post-wrapper {
+  display: none;
+}
+
+/* line 5, ../compass/sass/_posts.scss */
 .posts-wrapper {
   margin: auto;
   padding-bottom: 20px;
 }
 
-/* line 6, ../compass/sass/_posts.scss */
+/* line 10, ../compass/sass/_posts.scss */
 .post {
   background-color: #E6E6E6;
   padding: 15px;
   margin: 10px auto;
   overflow: hidden;
 }
-/* line 11, ../compass/sass/_posts.scss */
+/* line 15, ../compass/sass/_posts.scss */
 .post h4, .post p {
   color: #009999;
 }
 
-/* line 16, ../compass/sass/_posts.scss */
+/* line 20, ../compass/sass/_posts.scss */
 .votes {
   color: #009999;
 }
 
-/* line 20, ../compass/sass/_posts.scss */
-.add-post {
+/* line 24, ../compass/sass/_posts.scss */
+#add-post {
   text-align: right;
   color: #000;
+}
+
+/* line 29, ../compass/sass/_posts.scss */
+#add-post:hover {
+  cursor: pointer;
 }

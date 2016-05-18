@@ -8,7 +8,6 @@
 		$passwordVerify = password_verify($_POST['password'], $hash);
 		if ($passwordVerify){
 			$_SESSION['username'] = $_POST['username'];
-			$_SESSION['uid'] = $result[0]['id'];
 			header('Location: /index.php#mission');
 			exit;
 		} else {

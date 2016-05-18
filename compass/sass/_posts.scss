@@ -1,3 +1,7 @@
+#new-post-wrapper {
+  display: none;
+}
+
 .posts-wrapper {
 	margin: auto;
   padding-bottom: 20px;
@@ -17,7 +21,11 @@
   color: $post-teal;
 }
 
-.add-post {
+#add-post {
 	text-align: right;
   color: #000;
+}
+
+#add-post:hover {
+  cursor: pointer;
 }

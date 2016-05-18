@@ -10,7 +10,7 @@
 	try {
 		DB::insert('posts', array(
 			'username' => $_SESSION['username'],
-			'postText' => $_POST['post_text']
+			'body' => $_POST['body']
 		));
 
 		header('Location: /index.php?post=success');
