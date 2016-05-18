@@ -1,17 +1,23 @@
 .posts-wrapper {
 	margin: auto;
+  padding-bottom: 20px;
 }
 
 .post {
   background-color: $post-bg;
   padding: 15px;
-  margin: auto;
+  margin: 10px auto;
   overflow: hidden;
   h4, p {
   	color: $post-teal;
   }
 }
 
-.votes, .fa {
+.votes {
   color: $post-teal;
+}
+
+.add-post {
+	text-align: right;
+  color: #000;
 }

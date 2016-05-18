@@ -7,6 +7,13 @@
 	// get the header and navbar in here
 	require_once('includes/head.php');
 	require_once('includes/header.php');
+
+	try {
+		$posts = DB::query("SELECT * FROM posts ORDER BY timestamp ASC;");
+	} catch (MeekroDBException $e){
+		header('Location: /index.php?noposts');
+	}
+
 ?>
 
 
@@ -24,24 +31,39 @@
 			<p>We have been active for over 3 years and embrace every chance we get to save these majestic accumulations of minerals and sediment. This site is a means for you to share your rock saving activity with other rock lovers. Please sign up and tell us a bit about the last rock you saved.</p>
 		</div>
 		<div id="posts" class="posts-wrapper">
-			<h2>Recent Posts</h2>
-			<p>Posts go here...</p>
-			<div class="post">
-				<div class="row">
-					<div class="col-sm-11">
-						<h4>Test Post</h4>
-						<p>This is a post.</p>
+			<h2>Make a Post</h2>
+			
+			<?php if(isset($_SESSION['username'])): ?>
+				<form action="post_process.php" method="post">
+					<div class="form-group">
+						<textarea id="post-text" class="form-control" name="post_text" placeholder="Type your post here"></textarea>
 					</div>
-					<div class="col-sm-1 votes-wrapper">
-						<a href="#" class="votes"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
-						<div class="votes">0</div>
-						<a href="#" class="votes"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
+					<button type="submit" class="btn btn-default">Post</button>
+				</form>
+			<?php else: ?>
+				<h4>You must be logged in to make a new post.</h4>
+			<?php endif; ?>
+
+			<h2>Recent Posts</h2>
+			<!-- <a href="new_post.php"><h1 class="add-post"><i class="fa fa-plus" aria-hidden="true"></i></h1></a> -->
+			
+			<?php foreach($posts as $post): ?>
+				<div class="post">
+					<div class="row">
+						<div class="col-sm-11">
+							<h4><?php print $post['postText']; ?></h4>
+							<p>Posted: <?php print $post['timestamp']; ?> by <?php print $post['username']; ?></p>
+						</div>
+						<div class="col-sm-1 votes-wrapper">
+							<a href="#" class="votes"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
+							<div class="votes">0</div>
+							<a href="#" class="votes"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
+						</div>
 					</div>
 				</div>
-			</div>
+			<?php endforeach; ?>
 		</div>
 	</div>
 </div>
 
-</body>
-</html>
+<?php require_once('includes/footer.php'); ?>

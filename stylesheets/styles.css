@@ -9,8 +9,9 @@ img {
 }
 
 /* line 1, ../compass/sass/_footer.scss */
-.footer {
-  background: #000;
+footer {
+  text-align: center;
+  padding: 5px;
 }
 
 /* line 1, ../compass/sass/_home.scss */
@@ -22,7 +23,7 @@ img {
 .splash {
   background-image: url("../images/quarry1.jpg");
   background-repeat: no-repeat;
-  background-position: 0% 0%;
+  background-position: 50% 50%;
   width: 100%;
   height: 93vh;
   position: relative;
@@ -48,9 +49,10 @@ img {
 .splash-inner h1 {
   margin: auto;
   text-align: center;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
 }
 
-/* line 33, ../compass/sass/_home.scss */
+/* line 34, ../compass/sass/_home.scss */
 .content-wrapper {
   width: 60%;
   margin: auto;
@@ -59,21 +61,28 @@ img {
 /* line 1, ../compass/sass/_posts.scss */
 .posts-wrapper {
   margin: auto;
+  padding-bottom: 20px;
 }
 
-/* line 5, ../compass/sass/_posts.scss */
+/* line 6, ../compass/sass/_posts.scss */
 .post {
   background-color: #E6E6E6;
   padding: 15px;
-  margin: auto;
+  margin: 10px auto;
   overflow: hidden;
 }
-/* line 10, ../compass/sass/_posts.scss */
+/* line 11, ../compass/sass/_posts.scss */
 .post h4, .post p {
   color: #009999;
 }
 
-/* line 15, ../compass/sass/_posts.scss */
-.votes, .fa {
+/* line 16, ../compass/sass/_posts.scss */
+.votes {
   color: #009999;
+}
+
+/* line 20, ../compass/sass/_posts.scss */
+.add-post {
+  text-align: right;
+  color: #000;
 }
