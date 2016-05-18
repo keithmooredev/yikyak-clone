@@ -37,7 +37,7 @@
 				<?php if(isset($_SESSION['username'])): ?>
 					<form action="post_process.php" method="post">
 						<div class="form-group">
-							<textarea id="post-text" class="form-control" name="post_text" placeholder="Type your post here"></textarea>
+							<textarea id="post-text" class="form-control" name="body" placeholder="Type your post here"></textarea>
 						</div>
 						<button type="submit" class="btn btn-default">Post</button>
 					</form>
@@ -57,11 +57,12 @@
 								$timestamp_as_unix = strtotime($post['timestamp']);
 								print date('F j, Y g:i a', $timestamp_as_unix);
 							?>
-								by <?php print $post['username']; ?></p>
+								by <?php print $post['username']; ?>		
+							</p>
 						</div>
 						<div class="col-sm-1 votes-wrapper">
 							<a href="vote.php?vote=upvote&id=<?php print $post['id']; ?>&user=<?php print $_SESSION['username']; ?>" class="votes"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i></a>
-							<div class="votes">0</div>
+							<div class="votes"><?php print $post['votes']; ?></div>
 							<a href="vote.php?vote=downvote&id=<?php print $post['id']; ?>&user=<?php print $_SESSION['username']; ?>" class="votes"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i></a>
 						</div>
 					</div>

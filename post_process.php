@@ -13,9 +13,9 @@
 			'body' => $_POST['body']
 		));
 
-		header('Location: /index.php?post=success');
+		header('Location: /index.php?post=success#posts');
 		exit;
 	} catch(MeekroDBException $e){
-		header('Location: /index.php?post=failure');
+		header('Location: /index.php?post=failure#posts');
 		exit;
 	}
