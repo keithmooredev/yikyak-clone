@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Save the Hippo</title>
+	<title>Save the Rocks</title>
 	<link rel="stylesheet" href="stylesheets/jquery-ui.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
@@ -34,8 +34,13 @@
 		<li><a href="index.php">Home</a></li>
 	  </ul>
 	  <ul class="nav navbar-nav navbar-right">
-		<li><a href="login.php">Login</a></li>
-		<li><a href="register.php">Register</a></li>
+		<?php
+			if (isset($_SESSION['username'])){
+				print "<li><a href='logout_process.php'>Log Out</a></li>";
+			} else {
+				print "<li><a href='login.php'>Login</a></li><li><a href='register.php'>Register</a></li>";	
+			}
+		?>
 	  </ul>
 	</div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

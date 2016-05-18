@@ -9,21 +9,21 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<h1>Registration</h1>
-			<?php 
+			<h5>Sign up to add new posts</h5>
+		</div>
+	</div>
+	<div class="row">
+		<?php 
 			if ($_GET['error'] == 'username'){
 				print "<h5>The username entered is taken.</h5>";
 			} else if ($_GET['error'] == 'password'){
 				print "<h5>The passwords do not match.</h5>";
 			}
-			?>
-		</div>
-	</div>
-	<div class="row">
-		<h5 class="error-message text-center">PHP Error Message Goes Here</h5>
+		?>
 	</div>
 	<div class="row">
 		<div class="col-sm-12 text-center">
-			<form action="accounts.php?action=register" method="post" class="form-horizontal">
+			<form action="register_process.php" method="post" class="form-horizontal">
 				<div class="form-group">
 					<label for="nameField" class="col-sm-4 control-label">Real Name:</label>
 					<div class="col-sm-4">
