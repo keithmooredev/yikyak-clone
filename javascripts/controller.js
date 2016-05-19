@@ -3,7 +3,6 @@ angular.module('myApp', []).controller(
 
 	function getPosts(){
 		$http.get('update_posts.php').then(function successCallback(response){
-		console.log(response.data);
 		$scope.posts = response.data;
 		}, function errorCallback(response){
 			console.log(response);
@@ -16,9 +15,14 @@ angular.module('myApp', []).controller(
 			vote: voteDirection,
 			pid: myParentElementId
 		}).then(function successCallback(response){
-			console.log(response);
 			if (response.data == "notLoggedIn"){
 				$scope.message = "You must be logged in to vote.";
+			}
+			else if (response.data == "alreadyVotedUp"){
+				$scope.message = "You already voted up.";
+			}
+			else if (response.data == "alreadyVotedDown"){
+				$scope.message = "You already voted down.";
 			}
 			else if (response.data == "success"){
 				getPosts();
@@ -26,6 +30,11 @@ angular.module('myApp', []).controller(
 		}, function errorCallback(response){
 			console.log(response);
 		});
+	};
+
+	$scope.follow = function(clickEvent){
+		console.log(clickEvent);
+		var myParentElementId = clickEvent.currentTarget.parentElement.id;
 	};
 
 	getPosts();

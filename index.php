@@ -37,13 +37,13 @@
 					<h4>You must be logged in to make a new post.</h4>
 				<?php endif; ?>
 			</div>
-
 	
 			<div class="post" ng-repeat="post in posts track by $index">
 				<div class="row">
-					<div class="col-sm-11">
+					<div class="col-sm-11" id="{{post.username}}">
 						<h4>{{post.body}}</h4>
 						<p>Posted: {{post.timestamp}} by {{post.username}}</p>
+						<p class="follow" ng-click="follow($event)"><em>follow</em></p>
 					</div>
 					<div class="col-sm-1 votes-wrapper" id="{{post.id}}">
 						<span ng-click="doVote($event, 1)" class="votes change-vote glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>

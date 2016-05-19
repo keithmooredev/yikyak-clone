@@ -97,6 +97,11 @@ footer {
   cursor: pointer;
 }
 
+/* line 37, ../compass/sass/_posts.scss */
+.follow:hover {
+  cursor: pointer;
+}
+
 /* line 1, ../compass/sass/_nav.scss */
 .navbar {
   margin-bottom: 0;
