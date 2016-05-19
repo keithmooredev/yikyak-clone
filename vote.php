@@ -14,10 +14,10 @@
 				'voter' => $_GET['user']
 			));
 			DB::query($query);
-			header('Location: http://kdavidmoore.com/savetherocks/index.php?vote=success#posts');
+			header('Location: index.php?vote=success#posts');
 			exit;
 		} catch(MeekroDBException $e){
-			header('Location: http://kdavidmoore.com/savetherocks/index.php?vote=error#posts');
+			header('Location: index.php?vote=error#posts');
 			exit;
 		}
 	} else if ($vote == 'downvote'){
@@ -30,10 +30,10 @@
 				'voter' => $_GET['user']
 			));
 			DB::query($query);
-			header('Location: http://kdavidmoore.com/savetherocks/index.php?vote=success#posts');
+			header('Location: index.php?vote=success#posts');
 			exit;
 		} catch(MeekroDBException $e){
-			header('Location: http://kdavidmoore.com/savetherocks/index.php?vote=error#posts');
+			header('Location: index.php?vote=error#posts');
 			exit;
 		}
 	}

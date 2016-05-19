@@ -8,15 +8,15 @@
 		$passwordVerify = password_verify($_POST['password'], $hash);
 		if ($passwordVerify){
 			$_SESSION['username'] = $_POST['username'];
-			header('Location: http://kdavidmoore.com/savetherocks/index.php#mission');
+			header('Location: index.php#mission');
 			exit;
 		} else {
 			// if php gets to this line, then the passwords didn't match
-			header('Location: http://kdavidmoore.com/savetherocks/login.php?error=nomatch');
+			header('Location: login.php?error=nomatch');
 			exit;
 		}
 	} catch(MeekroDBException $e){
 		// the user doesn't exist
-		header('Location: http://kdavidmoore.com/savetherocks/login.php?error=nouser');
+		header('Location: login.php?error=nouser');
 		exit;
 	}
