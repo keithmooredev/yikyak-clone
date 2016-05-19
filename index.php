@@ -19,7 +19,7 @@
 
 <div class="splash">
 	<div class="splash-inner">
-		<a href="#mission"><h1>Save the Rocks</h1></a>
+		<a href="#mission"><h1>Talk about rocks</h1></a>
 	</div>
 </div>
 
@@ -27,8 +27,7 @@
 	<div class="content-wrapper">
 		<div id="mission" class="mission">
 			<h2>Our Mission</h2>
-			<p>We are a society dedicated to saving the rocks. Each day, thousands of rocks are blasted into oblivion by anthropogenic activities. If we don't act soon, there will be no more rocks left.</p>
-			<p>We have been active for over 3 years and embrace every chance we get to save these majestic accumulations of minerals and sediment. This site is a means for you to share your rock saving activity with other rock lovers. Please sign up and tell us a bit about the last rock you saved.</p>
+			<p>We are a society dedicated to bringing rock lovers together for the advancement of geoscience. Tell us about some rocks you saw recently.</p>
 		</div>
 		<div id="posts" class="posts-wrapper">
 			<h2>Recent Posts</h2>

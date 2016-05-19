@@ -1,4 +1,4 @@
 
-	<footer>Worldwide Society of Rock Lovers | All Rights Reserved</footer>
+	<footer>International Association of Rockhounds | All Rights Reserved</footer>
 </body>
 </html>

@@ -1,6 +1,6 @@
-# Yik Yak Clone: Save the Rocks
+# Yik Yak Clone: Rock Talk
 
-Share your thoughts on saving the rocks.
+Share your thoughts about your favorite rocks.
 
 ## Features
 * PHP app that allows the user to log in or resgister, saving their username as a session variable
@@ -9,6 +9,6 @@ Share your thoughts on saving the rocks.
 * New messages are saved to a 'posts' table in a MySQL database
 * MeekdroDB is used to build and send MySQL queries, automatically protecting against SQL injection
 
-## [Demo here](http://savetherocks.kdavidmoore.com)
+## [Demo here](http://kdavidmoore.com/rocktalk)
 
 [I learned this at DigitalCrafts](http://digitalcrafts.com)
