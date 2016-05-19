@@ -11,26 +11,28 @@
 
 	$decoded_json = json_decode($json_received, true);
 
-	$vote_total = "SELECT SUM(vote) AS vote_total FROM votes WHERE pid=" . $decoded_json['pid'];
-
-	$did_vote = DB::query("SELECT * FROM votes WHERE username = %s AND pid = %i", $_SESSION['username'], $decoded_json['pid']);
+	$did_vote = DB::query("SELECT * FROM votes WHERE voter = %s AND pid = %i ORDER BY timestamp DESC;", $_SESSION['username'], $decoded_json['pid']);
 
 	if (DB::count() !== 0){
-		print "alreadyVoted";
-		exit;
-	}
-
-	try {
+		if ($decoded_json['vote'] == 1 && $did_vote[0]['vote'] == 1){
+			print "alreadyVotedUp";
+			exit;
+		} else if ($decoded_json['vote'] == -1 && $did_vote[0]['vote'] == (-1)){
+			print "alreadyVotedDown";
+			exit;
+		} else {
+			// update the vote in the database
+			DB::query("UPDATE votes SET vote = vote + %i WHERE voter = %s and pid = %i;", $decoded_json['vote'], $_SESSION['username'], $decoded_json['pid']);
+			print "success";
+			exit;
+		}
+	} else {
+		// insert the vote in the database
 		DB::insert('votes', array(
 			'pid' => $decoded_json['pid'],
 			'vote' => $decoded_json['vote'],
 			'voter' => $_SESSION['username']
 		));
-
-		$result = DB::query($vote_total);
-	
-		print json_encode($result[0]['vote_total'], JSON_NUMERIC_CHECK);
-
-		} catch(MeekroDBException $e){
-		print json_encode("error");
+		print "success";
+		exit;
 	}
