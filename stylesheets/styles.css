@@ -82,12 +82,17 @@ footer {
 }
 
 /* line 24, ../compass/sass/_posts.scss */
+.change-vote:hover {
+  cursor: pointer;
+}
+
+/* line 28, ../compass/sass/_posts.scss */
 #add-post {
   text-align: right;
   color: #000;
 }
 
-/* line 29, ../compass/sass/_posts.scss */
+/* line 33, ../compass/sass/_posts.scss */
 #add-post:hover {
   cursor: pointer;
 }
