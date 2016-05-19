@@ -21,11 +21,19 @@
   color: $post-teal;
 }
 
+.change-vote:hover {
+  cursor: pointer;
+}
+
 #add-post {
 	text-align: right;
   color: #000;
 }
 
 #add-post:hover {
+  cursor: pointer;
+}
+
+.follow:hover {
   cursor: pointer;
 }
