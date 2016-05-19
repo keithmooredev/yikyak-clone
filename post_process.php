@@ -3,7 +3,7 @@
 	require_once('includes/head.php');
 
 	if (!isset($_SESSION['username'])){
-		header('Location: /login.php');
+		header('Location: http://kdavidmoore.com/savetherocks/login.php');
 		exit;
 	}
 
@@ -13,9 +13,9 @@
 			'body' => $_POST['body']
 		));
 
-		header('Location: /index.php?post=success#posts');
+		header('Location: http://kdavidmoore.com/savetherocks/index.php?post=success#posts');
 		exit;
 	} catch(MeekroDBException $e){
-		header('Location: /index.php?post=failure#posts');
+		header('Location: http://kdavidmoore.com/savetherocks/index.php?post=failure#posts');
 		exit;
 	}

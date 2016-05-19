@@ -11,7 +11,7 @@
 	try {
 		$posts = DB::query("SELECT * FROM posts ORDER BY timestamp DESC;");
 	} catch (MeekroDBException $e){
-		header('Location: /index.php?noposts');
+		header('Location: http://kdavidmoore.com/savetherocks/index.php?noposts');
 	}
 
 ?>
