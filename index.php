@@ -40,10 +40,10 @@
 	
 			<div class="post" ng-repeat="post in posts track by $index">
 				<div class="row">
-					<div class="col-sm-11" id="{{post.username}}">
+					<div class="col-sm-11">
 						<h4>{{post.body}}</h4>
 						<p>Posted: {{post.timestamp}} by {{post.username}}</p>
-						<p class="follow" ng-click="follow($event)"><em>follow</em></p>
+						<p id="{{post.username}}" class="follow" ng-click="follow($event)"><em>follow</em></p>
 					</div>
 					<div class="col-sm-1 votes-wrapper" id="{{post.id}}">
 						<span ng-click="doVote($event, 1)" class="votes change-vote glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
@@ -59,9 +59,13 @@
 
 <script>
 $(document).ready(function(){
+	
+	$.localScroll();
+
 	$('#add-post').click(function(){
 		$('#new-post-wrapper').toggle();
 	});
+	
 });
 </script>
 

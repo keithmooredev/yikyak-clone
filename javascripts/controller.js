@@ -33,8 +33,14 @@ angular.module('myApp', []).controller(
 	};
 
 	$scope.follow = function(clickEvent){
-		console.log(clickEvent);
-		var myParentElementId = clickEvent.currentTarget.parentElement.id;
+
+		$http.post('follow_process.php', {
+			poster: clickEvent.currentTarget.id
+		}).then(function successCallback(response){
+			console.log(response);
+		}, function errorCallback(response){
+			console.log(response);
+		});
 	};
 
 	getPosts();

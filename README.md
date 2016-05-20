@@ -7,8 +7,8 @@ Share your thoughts about your favorite rocks.
 * New user account info is saved to a 'users' table in a MySQL database
 * Once the session variable is set, the user can post YikYak-esque messages on index.php
 * New messages are saved to a 'posts' table in a MySQL database
-* MeekdroDB is used to build and send MySQL queries, automatically protecting against SQL injection
-* In progress: using AngularJS to add posts to the page and update post info (votes, etc.)
+* MeekdroDB is used to send queries to MySQL, protecting against SQL injection
+* AngularJS controller sends http requests to backend, populating index.php with new and stored postsd
 
 ## [Demo here](http://kdavidmoore.com/rocktalk)
 
