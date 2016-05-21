@@ -1,8 +1,9 @@
 angular.module('myApp', []).controller(
-	'mainController', function($scope, $http){
+	'mainController', function($scope, $http) {
 
 	function getPosts(){
-		$http.get('update_posts.php').then(function successCallback(response){
+
+		$http.get('update_posts.php').then(function successCallback(response) {
 			$scope.posts = response.data;
 		}, function errorCallback(response){
 			console.log(response);
@@ -10,32 +11,34 @@ angular.module('myApp', []).controller(
 	};
 
 	function getFollowing(){
-		// on login, get all posters that the current user is following
-		$http.get('get_following.php').then(function successCallback(response){
-			$scope.following = [];
-			for (var i=0; i<response.data.length; i++) {
-				$scope.following.push(response.data[i].poster);
-				console.log($scope.following);
-			}
+		// if the user is logged in, get all posters that the current user is following
+		$http.get('get_following.php').then(function successCallback(response) {
+			if (response.data !== 'notLoggedIn') {
+				$scope.following = [];
+				for (var i=0; i<response.data.length; i++) {
+					$scope.following.push(response.data[i].poster);
+					console.log($scope.following);
+				}
+			} // end if
 		}, function errorCallback(response){
 			console.log(response);
 		});
 	};
 
-	$scope.doVote = function(clickEvent, voteDirection){
-		var myParentElementId = clickEvent.target.parentElement.id;
+	$scope.doVote = function(clickEvent, voteDirection) {
+
 		$http.post('vote_process.php', {
 			vote: voteDirection,
-			pid: myParentElementId
+			pid: clickEvent.target.parentElement.id
 		}).then(function successCallback(response){
 			if (response.data == "notLoggedIn"){
-				$scope.message = "You must be logged in to vote.";
+				alert("You must be logged in to vote.");
 			}
 			else if (response.data == "alreadyVotedUp"){
-				$scope.message = "You already voted up.";
+				alert("You already voted up.");
 			}
 			else if (response.data == "alreadyVotedDown"){
-				$scope.message = "You already voted down.";
+				alert("You already voted down.");
 			}
 			else if (response.data == "success"){
 				getPosts();
@@ -53,6 +56,8 @@ angular.module('myApp', []).controller(
 			if (response.data == 'success'){
 				// update the following array
 				getFollowing();
+			} else {
+				alert("You must be logged in to follow a poster.");
 			}
 		}, function errorCallback(response){
 			console.log(response);
