@@ -8,20 +8,10 @@
 		$decoded_json = json_decode($json_received, true);
 		$poster_username = $decoded_json['poster'];
 
-		DB::query("SELECT * FROM following WHERE follower = %s AND poster = %s",
+		$result = DB::query("SELECT poster FROM following WHERE follower = %s",
 		$_SESSION['username'], $poster_username);
 
-		if (DB::count() > 0){
-			print 'alreadyFollowed';
-			exit;
-		}
-
-		DB::insert('following', array(
-			'follower' => $_SESSION['username'],
-			'poster' => $poster_username
-		));
-
-		print 'success';
+		print json_encode($result);
 		exit;
 
 	} else {

@@ -30,7 +30,7 @@
 		<span class="icon-bar"></span>
 	  </button>
 	  <a class="navbar-brand" href="index.php">
-	  	<img class="brand-img" src="images/hammers.png">
+	  	<img class="brand-img" src="images/hammers.svg">
 	  </a>
 	</div>
 
@@ -44,7 +44,7 @@
 			if (isset($_SESSION['username'])){
 				print "<li><a href='logout_process.php'>Log Out</a></li>";
 			} else {
-				print "<li><a href='login.php'>Login</a></li><li><a href='register.php'>Register</a></li>";	
+				print "<li><a href='login.php'>Login</a></li><li><a href='register.php'>Register</a></li>";
 			}
 		?>
 	  </ul>

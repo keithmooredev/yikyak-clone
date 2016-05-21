@@ -3,12 +3,17 @@
 }
 
 .navbar-brand {
+  overflow: hidden;
+  position: relative;
   width: 50px;
 }
 
 .brand-img {
   width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 5px;
+  padding: 8px;
 }
 
 @media (min-width: 500px) {

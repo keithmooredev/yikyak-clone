@@ -8,7 +8,7 @@ Share your thoughts about your favorite rocks.
 * Once the session variable is set, the user can post YikYak-esque messages on index.php
 * New messages are saved to a 'posts' table in a MySQL database
 * MeekdroDB is used to send queries to MySQL, protecting against SQL injection
-* AngularJS controller sends http requests to backend, populating index.php with new and stored postsd
+* AngularJS controller sends http requests to backend, populating index.php with new and stored posts
 
 ## [Demo here](http://kdavidmoore.com/rocktalk)
 

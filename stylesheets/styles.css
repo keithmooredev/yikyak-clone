@@ -109,23 +109,28 @@ footer {
 
 /* line 5, ../compass/sass/_nav.scss */
 .navbar-brand {
+  overflow: hidden;
+  position: relative;
   width: 50px;
 }
 
-/* line 9, ../compass/sass/_nav.scss */
+/* line 11, ../compass/sass/_nav.scss */
 .brand-img {
   width: 100%;
-  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 5px;
+  padding: 8px;
 }
 
 @media (min-width: 500px) {
-  /* line 15, ../compass/sass/_nav.scss */
+  /* line 20, ../compass/sass/_nav.scss */
   li {
     margin-right: 5px;
   }
 }
 @media (max-width: 499px) {
-  /* line 21, ../compass/sass/_nav.scss */
+  /* line 26, ../compass/sass/_nav.scss */
   li {
     margin-left: 10px;
   }
