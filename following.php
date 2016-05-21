@@ -15,8 +15,9 @@
 
 	<div class="row">
 		<div class="col-sm-12">
-
-
+			<!-- Meh, I'm not really sure I want a followers page...
+			Following and unfollowing can be done from index.php
+		 	-->
 		</div>
 	</div>
 </div>

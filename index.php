@@ -24,8 +24,8 @@
 		</div>
 		<div id="posts" class="posts-wrapper">
 			<h2>Recent Posts</h2>
-			<h1 id="add-post"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></h1>
-			<div id="new-post-wrapper">
+			<h2 class="text-right plus-icon" ng-click="plusClicked = !plusClicked"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></h2>
+			<div ng-show="plusClicked">
 				<?php if(isset($_SESSION['username'])): ?>
 					<form action="post_process.php" method="post">
 						<div class="form-group">
@@ -34,7 +34,7 @@
 						<button type="submit" class="btn btn-default">Post</button>
 					</form>
 				<?php else: ?>
-					<h4>You must be logged in to make a new post.</h4>
+					<h4 class="text-warning">You must be logged in to make a new post.</h4>
 				<?php endif; ?>
 			</div>
 
@@ -44,7 +44,7 @@
 						<h4>{{post.body}}</h4>
 						<p>Posted: {{post.timestamp}} by {{post.username}}</p>
 						<p id="{{post.username}}" class="follow" ng-click="follow($event)" ng-hide="following.indexOf(post.username) > -1"><em>follow</em></p>
-						<p class="follow" ng-show="following.indexOf(post.username) > -1" ng-click="unfollow($event, $index)"><em>unfollow</em></p>
+						<p class="follow" ng-show="following.indexOf(post.username) > -1" ng-click="unfollow($event)"><em>unfollow</em></p>
 					</div>
 					<div class="col-sm-1 votes-wrapper" id="{{post.id}}">
 						<span ng-click="doVote($event, 1)" class="votes change-vote glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
@@ -60,13 +60,7 @@
 
 <script>
 $(document).ready(function(){
-
 	$.localScroll();
-
-	$('#add-post').click(function(){
-		$('#new-post-wrapper').toggle();
-	});
-
 });
 </script>
 
