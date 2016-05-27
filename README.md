@@ -15,6 +15,6 @@ Share your thoughts about your favorite rocks.
 * Separating the AngularJS front-end from the PHP back-end; the front-end still depends on PHP for some functionality
 * When alerting the user that you must be logged in to follow or vote -- change this to a less obtrusive message than window.alert()
 
-## [Demo here](http://kdavidmoore.com/savetherocks)
+## [Demo here](http://rocks.kdavidmoore.com)
 
 [I learned this at DigitalCrafts](http://digitalcrafts.com)

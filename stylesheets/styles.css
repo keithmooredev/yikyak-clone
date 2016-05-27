@@ -107,14 +107,14 @@ footer {
   margin-bottom: 0;
 }
 
-/* line 10, ../compass/sass/_nav.scss */
+/* line 5, ../compass/sass/_nav.scss */
 .navbar-brand {
   overflow: hidden;
   position: relative;
   width: 50px;
 }
 
-/* line 16, ../compass/sass/_nav.scss */
+/* line 11, ../compass/sass/_nav.scss */
 .brand-img {
   width: 100%;
   position: absolute;
@@ -124,13 +124,13 @@ footer {
 }
 
 @media (min-width: 500px) {
-  /* line 25, ../compass/sass/_nav.scss */
+  /* line 20, ../compass/sass/_nav.scss */
   li {
     margin-right: 5px;
   }
 }
 @media (max-width: 499px) {
-  /* line 31, ../compass/sass/_nav.scss */
+  /* line 26, ../compass/sass/_nav.scss */
   li {
     margin-left: 10px;
   }
